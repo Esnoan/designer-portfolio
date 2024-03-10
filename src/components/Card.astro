@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string
+  body: string
+  href: string
+}
+
+import Chip from '@/components/Chip.astro'
+
+const { href, title, body } = Astro.props
+---
+
+<div class='w-full flex my-12'>
+  <section class='w-1/2 flex flex-col justify-between pl-4'>
+    <h2 class='text-2xl text-black'>
+      {title}
+    </h2>
+    <div class='flex gap-2'>
+      <Chip title='Design System' />
+      <Chip title='UI Design' />
+    </div>
+    <p class='text-gray'>
+      {body}
+    </p>
+    <a href={href} class='flex gap-2 text-black'>
+      View Project<svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='27'
+        height='27'
+        fill='none'>
+        <path
+          stroke='#07041F'
+          d='M23.625 11.813V3.374h-8.438M23.625 3.375l-20.25 20.25'>
+        </path>
+      </svg>
+    </a>
+  </section>
+  <section class='w-1/2'>
+    <img
+      src='/images/system-design.jpeg'
+      alt='placeholder'
+      class='h-48 object-cover w-full rounded-lg shadow'
+    />
+  </section>
+</div>
