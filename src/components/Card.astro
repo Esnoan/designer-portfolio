@@ -3,11 +3,13 @@ interface Props {
   title: string
   body: string
   href: string
+  tags: string[]
+  image: string
 }
 
 import Chip from '@/components/Chip.astro'
 
-const { href, title, body } = Astro.props
+const { href, title, body, image, tags } = Astro.props
 ---
 
 <div class='w-full flex my-12'>
@@ -16,8 +18,7 @@ const { href, title, body } = Astro.props
       {title}
     </h2>
     <div class='flex gap-2'>
-      <Chip title='Design System' />
-      <Chip title='UI Design' />
+      {tags.map((tag) => <Chip title={tag} />)}
     </div>
     <p class='text-gray'>
       {body}
@@ -37,7 +38,7 @@ const { href, title, body } = Astro.props
   </section>
   <section class='w-1/2'>
     <img
-      src='/images/system-design.jpeg'
+      src={image}
       alt='placeholder'
       class='h-48 object-cover w-full rounded-lg shadow'
     />

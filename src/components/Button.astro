@@ -1,0 +1,21 @@
+---
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<div
+  class='bg-gradient-to-t from-[#0F093E] to-[#07041F] text-white px-5 py-2 text-base flex gap-2 max-w-fit justify-center items-center btn'>
+  <slot />
+  <slot name='icon' />
+</div>
+
+<style>
+  .btn {
+    box-shadow:
+      -3px 3px #fff,
+      -7px 7px 0px 0px #07041f;
+  }
+</style>

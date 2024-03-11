@@ -1,9 +1,10 @@
 ---
+import Button from '@/components/Button.astro'
 import Card from '@/components/Card.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout title='Juan Camilo Urbano'>
   <main>
     <h1 class='font-xanh text-6xl'>Crafting and Design.</h1>
     <p class='text-gray mt-2 text-lg'>
@@ -15,7 +16,39 @@ import Layout from '../layouts/Layout.astro'
       title='Swiset Design System'
       body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
       href='#'
+      image='/images/system-design.jpeg'
+      tags={['Design System', 'UI Design']}
     />
+    <div class='border-t border-gray/30 my-4'></div>
+    <Card
+      title='Leaderboard'
+      body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
+      href='#'
+      image='/images/leaderboard.jpeg'
+      tags={['UX Design', 'UI Design']}
+    />
+    <div class='border-t border-gray/30 my-4'></div>
+    <h2 class='text-black text-5xl text-center mt-12 mb-8'>
+      Hey, I am Camilo.<br /> Get to know me
+    </h2>
+    <p class='my-4 text-2xl text-center'>
+      My passion lies in creating sustainable, data-driven solutions that
+      improve human experiences.
+    </p>
+    <div class='flex justify-center'>
+      <Button>
+        Get in touch
+        <Fragment slot='icon'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            fill='none'>
+            <path stroke='#fff' d='m9 6 6 6-6 6'></path>
+          </svg>
+        </Fragment>
+      </Button>
+    </div>
   </main>
 </Layout>
 
