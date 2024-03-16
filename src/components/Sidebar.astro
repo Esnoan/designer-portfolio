@@ -1,4 +1,11 @@
-<aside class='w-[350px] bg-light-gray min-h-screen p-10 fixed'>
+---
+import SocialNetworks from './SocialNetworks.astro'
+
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1) // remove the first "/"
+---
+
+<aside class='w-[350px] bg-light-gray min-h-screen p-10 fixed drop-shadow-lg'>
   <header>
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -34,32 +41,23 @@
   </header>
   <div class='border-t border-gray/30 my-4'></div>
   <ul class='space-y-2'>
-    <li class='uppercase font-semibold m-0'>
-      <a class='active:text-black' href='/'>Work</a>
+    <li class={`uppercase m-0 ${currentPath === '' ? 'font-semibold' : ''}`}>
+      <a class='active:text-black' href='/'>Home</a>
+    </li>
+    <li
+      class={`uppercase m-0 ${currentPath === 'work' ? 'font-semibold' : 'text-gray'}`}>
+      <a class='active:text-black' href='/work'>Work</a>
     </li>
     <li class='uppercase text-gray m-0'>
-      <a class='hover:text-black' href='#'>About</a>
+      <a class='hover:text-black' href='#about'>About</a>
     </li>
     <li class='uppercase text-gray m-0'>
-      <a class='hover:text-black' href='#'>Resume</a>
+      <a class='hover:text-black' href='#resume'>Resume</a>
     </li>
     <li class='uppercase text-gray m-0'>
-      <a class='hover:text-black' href='#'>Contact</a>
+      <a class='hover:text-black' href='#contact'>Contact</a>
     </li>
   </ul>
   <div class='border-t border-gray/30 my-4'></div>
-  <div class='flex gap-2 mt-4'>
-    <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'>
-      <path stroke='#000' d='M35 7.5H5v25h30v-25Z'></path><path
-        stroke='#000'
-        d='m35 12.5-15 10-15-10'>
-      </path>
-    </svg>
-    <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'>
-      <path
-        stroke='#000'
-        d='M33.125 35V20M14.375 35V12.5M14.375 20c0-4.144 4.2-7.5 9.375-7.5s9.375 3.356 9.375 7.5M6.875 5v3.75M6.875 12.5V35'>
-      </path>
-    </svg>
-  </div>
+  <SocialNetworks />
 </aside>

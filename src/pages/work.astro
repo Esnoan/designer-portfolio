@@ -1,0 +1,217 @@
+---
+import Category from '@/components/Category.astro'
+import Paragraph from '../components/Paragraph.astro'
+import Tag from '../components/Tag.astro'
+import WorkLayout from '../layouts/WorkLayout.astro'
+---
+
+<WorkLayout title='Juan Camilo Urbano'>
+  <main>
+    <img src='/images/marco/marco.webp' alt='' />
+    <p class='uppercase text-xl text-[#667085] font-bold my-6'>
+      published on <span class='font-normal'>12 SEP 2022</span>
+    </p>
+    <h1 class='text-4xl'>Marco, Mobile Application - UX/UI Case Study.</h1>
+    <img src='/images/marco/marco-tags.webp' alt='' class='my-6' />
+    <Paragraph title='About'>
+      Marco is an app that helps people to know what is happening in their city
+      with a lot of events and activities to do, Marco facilitates contact with
+      the creators of events and those interested, is an excellent tool for both
+      people who want to go out and learn more about their city and for all
+      tourists who want to know the city they visit.
+    </Paragraph>
+
+    <div class='flex gap-4 my-8'>
+      <Tag text='👨‍💻 My Role: UI/UX Design' />
+      <Tag text='🎨 Tools: Figma' />
+      <Tag text='⌛ Duration: 3 Weeks' />
+      <Tag text='🙋 Audience:  16 - 50 years old' />
+    </div>
+
+    <Paragraph title='Problem'>
+      Have you ever wanted to get out and see more of your city but don't know
+      where to start? Do you want to filter all the activities and events
+      happening in your city by the ones that really interest you? Do you want
+      to visit a city and know the best events it has for you? Marco was born
+      from this need, and we are committed to give you a solution to this
+      problem.
+    </Paragraph>
+
+    <Paragraph title='Solution'>
+      The main objective is to create an app where people can create and book
+      attendance to events in a large calendar, in Marco there will be many
+      filters so that people can filter events and activities by their
+      interests, you can also filter by city, you can view each event with their
+      respective description, image and requirements, you can also vote the
+      events.
+    </Paragraph>
+
+    <Paragraph title='Why I Design this Project?'>
+      The main objective is to create an app where people can create and book
+      attendance to events in a large calendar, in Marco there will be many
+      filters so that people can filter events and activities by their
+      interests, you can also filter by city, you can view each event with their
+      respective description, image and requirements, you can also vote the
+      events.
+    </Paragraph>
+
+    <div class='flex gap-24 flex-wrap items-center justify-center'>
+      <Category title='🗺️ Where' text='Cali, Colombia' />
+      <Category title='🗺️ For' text='Mobile App for Android & iOS' />
+      <Category title='🗓️ When' text='Jan 2023 - Feb 2023' />
+      <Category title='🎯 Why' text='Real project' />
+      <Category
+        title='🏕️ Category'
+        text='Travel, tourism, entertainment, Food & drink'
+      />
+    </div>
+
+    <h2 class='text-black text-4xl mt-12 mb-8'>Stage of Design</h2>
+    <img src='/images/marco/stage-of-design.png' alt='' />
+    <Paragraph title='Research'>
+      To have a broader and more realistic scenario, I conducted a survey to
+      learn more about the problems my potential users face. The idea is that
+      after the results obtained we can design based on real data that helps us
+      improve the experience of our future users.
+      <br />
+      <br />
+      The survey consisted of 9 questions, 26 people and these were the results:
+    </Paragraph>
+    <img src='/images/marco/chart-1.png' alt='' />
+    <img src='/images/marco/chart-2.png' alt='' />
+    <img src='/images/marco/chart-3.png' alt='' />
+    <img src='/images/marco/chart-4.png' alt='' />
+    <img src='/images/marco/chart-5.png' alt='' />
+    <img src='/images/marco/chart-6.png' alt='' />
+    <img src='/images/marco/chart-7.png' alt='' />
+    <img src='/images/marco/chart-8.png' alt='' />
+    <img src='/images/marco/chart-9.png' alt='' />
+
+    <h2 class='text-black text-4xl mt-12 mb-8'>Relevant Comments</h2>
+    <img src='/images/marco/comments.png' alt='' />
+    <Paragraph title='Observations'>
+      This survey and the feedback from the respondents was very helpful to
+      understand mainly what are the problems and frustrations our future users
+      face, their goals and desires and how our app can help them to fulfill
+      them. An digital product is never 100% designed or developed, but <b>
+        these first findings inspire us to have a solid base with which to start
+        designing our product.
+      </b>
+    </Paragraph>
+    <h2 class='text-black text-4xl mt-12 mb-8'>Competitive Analysis</h2>
+    <div class='flex gap-4 justify-between items-center'>
+      <img src='/images/marco/airbnb.png' alt='' class='h-[60px]' />
+      <img src='/images/marco/tripadvisor.png' alt='' class='h-[100px]' />
+      <svg
+        width='100'
+        height='100'
+        viewBox='0 0 100 100'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        xmlns:xlink='http://www.w3.org/1999/xlink'>
+        <circle cx='50' cy='50' r='50' fill='#451111' fill-opacity='0.84'>
+        </circle>
+        <rect width='100' height='100' fill='url(#pattern0)'></rect>
+        <defs>
+          <pattern
+            id='pattern0'
+            patternContentUnits='objectBoundingBox'
+            width='1'
+            height='1'>
+            <use xlink:href='#image0_479_235' transform='scale(0.00666667)'>
+            </use>
+          </pattern>
+          <image
+            id='image0_479_235'
+            width='150'
+            height='150'
+            xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAADAFBMVEUAAAAVFRIcHxwpLSn///8rKCEgJCIwNzb///8pMTD///////8oO0FZTj1TSTr+//9LRDdBOSr///9kXU40Rkv+//9namNKWVz9//7///87U1wyLCD///////98bltXTDlPWlrDs5p1d3BxY0p9dGIjPUj///9OaHI/W2Z8fndedXhhY11zalr+/vr///iAi4qIeF9gdHhZTTr///7/++rm3MfB2d7f18GmnYvBxLuvtK67tKNqgYqRhnSDe2gvTFj38uT////5//7W7fLp6NmuvsSpu8COjoWyqpR4k55tgYTf8vf///7p3cje5uLW4NvFzMfZ0LuducPGuJ6ipp+OrLSToqS0rJhdeoRsiZaWj4KNmpt6g38wMyz/++zy9e307dn0+vf379zs48/W6/DM2dmrwsigop2YsrmuqZmenJKCm6KLlZWcm5F7cF6EnaNlfohJYGn//vj1/v7//fD+/O789+Ll9Pb89uW909vm4tXLycCus6vYxqzDzcu3zdHPw6/Wzr7QwqeFoq2hr7Cwn4R2j5mhkHd/hYBwiZJ0YklYUkFXam4xRUzw/f/69OTt+/3y8ufo+v7y/v/l6ODm2cPW7fLX18/WyrTZ4eCwvLvE4uqzqpe+vrSorKN6k56prqmtrqKUhW9wi5SXiXJXdID//vX3///m8vbV1cvL5ezT5Ojl4tX6/v3G4OXKzsnP4ubNwa2hkHi4qIyHoquVhW2cs7Sll39hbmv5+fL///n/++z///X37+Du7+f8+u3c0r7R2NKyz9jV083A2+HSyrent7uJe2RTanWfl4VNTkf2/P30///i8/Xr8/D07t7U0MLR19Car7fLvKWWqKyYoqKOf2bPxquuwsXq5dbj7ejx5c7F2d/V5+nq59j36dCoytX279esmoSkxM/F3eG/w7+px9BmgIyWjn3y9vHn8e/Iu6bFtZvo7erBzctxXkPp8vXZ6Ozz8ufh+/+gvMT///vb8/f9+ujw+Pjk6d29x8aNqbTGv6Th3M/////6/v5zjIXUAAAA/nRSTlMAAwcM/g8JFPcR+vQdJx3wIxftLhnqPibb5ykZ5N1ELyKNSzg2IvE5MFZANCr+71JPNDTg0auppWaQiHtTTD821tPHx7qJf3BtXzzizca9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'
+          />
+        </defs>
+      </svg>
+      <img src='/images/marco/aventure-colombia.png' alt='' class='h-[60px]' />
+    </div>
+    <Paragraph>
+      In general our competition is very diversified and there is no product
+      that resembles what Marco wants to be, although there are many aspects to
+      take into account of these platforms that could help us to have a clearer
+      picture of what users like and what they reject.
+    </Paragraph>
+    <Paragraph>
+      For this reason we collected some user reviews of these platforms that
+      could help us to improve and give a better product to our future users,
+      this is what we found:
+    </Paragraph>
+    <img src='/images/marco/pro-con.png' alt='' />
+    <Paragraph title='Definition'>
+      The definition stage is essential to know in more depth who our users will
+      be, which will help us to better understand their frustrations and
+      objectives. It will also help us to segment our users, which will be of
+      great help when designing a product with a true value proposition for our
+      users.
+    </Paragraph>
+    <Paragraph title='UX Personas'>
+      I carried out two ux persona cases to have a broader spectrum of the
+      profiles of the users who will use the app. In general, what I was looking
+      for was to know more in depth who our users will be in order to be able to
+      provide them with an app that gives them a fairly complete solution to
+      their needs. needs.
+    </Paragraph>
+    <img src='/images/marco/person-1.png' alt='' />
+    <img src='/images/marco/person-2.png' alt='' class='mt-14' />
+    <Paragraph title='Empathy Map'>
+      Through this tool I managed to learn more about our next users, delving
+      especially into the most human part, I feel that if we want to give a more
+      complete response with our product, this is one of the most necessary
+      tools in any design process, especially when start of the project.
+    </Paragraph>
+    <img src='/images/marco/person-11.png' alt='' class='mt-14' />
+    <Paragraph title='Storyboarding'>
+      I needed a broader picture, a great answer I found to understand and
+      explore what our users' experience in the app would be like was
+      Storyboarding. The result was divided into 2 panoramas: large image and
+      close-up, the result was as follows:
+    </Paragraph>
+    <img src='/images/marco/susan.png' alt='' class='mt-14' />
+    <img src='/images/marco/story-2.png' alt='' class='mt-14' />
+    <img src='/images/marco/story-1.png' alt='' class='mt-14' />
+    <img src='/images/marco/susan.png' alt='' class='mt-14' />
+    <img src='/images/marco/story-3.png' alt='' class='mt-14' />
+    <img src='/images/marco/story-4.png' alt='' class='mt-14' />
+    <Paragraph>
+      📌 For this UX Storyboading I used Figma's Storyboard Mix-and-match
+      library designed by Lucian Popovici.
+    </Paragraph>
+    <Paragraph title='User Journey Before Marco'>
+      Use this method essentially to identify ways to help users achieve their
+      objectives as quickly and easily as possible.
+    </Paragraph>
+    <div class='flex justify-center'>
+      <img
+        src='/images/marco/susan-profile.jpeg'
+        alt=''
+        class='mt-14 h-[180px] w-[180px] object-cover'
+      />
+    </div>
+    <img src='/images/marco/journey.png' alt='' class='mt-14' />
+    <h2 class='text-3xl text-black mt-14'>User Journey After Marco</h2>
+    <div class='flex justify-center'>
+      <img
+        src='/images/marco/susan-profile.jpeg'
+        alt=''
+        class='mt-14 h-[180px] w-[180px] object-cover'
+      />
+    </div>
+    <img src='/images/marco/journey-2.png' alt='' class='mt-14' />
+    <Paragraph title='Ideation'>
+      This phase was extremely important, it is about generating ideas, in order
+      to establish what our users will see at the end of the design process, our
+      goal is to get to have the architecture of the information that our users
+      will receive, so we will start with two techniques that through research
+      and exploration will help us to have a solid foundation to establish the
+      information of our app.
+    </Paragraph>
+  </main>
+</WorkLayout>
+
+<style></style>

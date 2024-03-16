@@ -9,7 +9,7 @@ import '@fontsource/xanh-mono/400-italic.css'
 const { title } = Astro.props
 
 import Footer from '../components/Footer.astro'
-import Sidebar from '../components/Sidebar.astro'
+import Navbar from '../components/Navbar.astro'
 ---
 
 <!doctype html>
@@ -23,14 +23,12 @@ import Sidebar from '../components/Sidebar.astro'
     <title>{title}</title>
   </head>
   <body>
-    <section class='flex max-w-[1280px] mx-auto'>
-      <Sidebar />
-      <div class='ml-[350px]'>
-        <div class='p-10'>
-          <slot />
-        </div>
-        <Footer />
+    <Navbar />
+    <section class='max-w-[1280px] mx-auto'>
+      <div class='p-10'>
+        <slot />
       </div>
+      <Footer />
     </section>
   </body>
 </html>

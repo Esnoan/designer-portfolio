@@ -1,0 +1,54 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
+
+import SocialNetworks from './SocialNetworks.astro'
+---
+
+<aside
+  class='w-full bg-light-gray py-4 px-12 drop-shadow-lg flex justify-between sticky top-0'>
+  <ul class='space-x-4 flex items-center'>
+    <li>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='40'
+        height='40'
+        fill='none'>
+        <path fill='#F4F5F6' d='M0 0h40v40H0z'></path><path
+          stroke='#07041F'
+          stroke-width='.5'
+          d='M20 35c2.761 0 5-6.716 5-15 0-8.284-2.239-15-5-15s-5 6.716-5 15c0 8.284 2.239 15 5 15Z'>
+        </path><path
+          stroke='#07041F'
+          stroke-width='.5'
+          d='M32.992 27.498c1.38-2.391-3.316-7.688-10.49-11.83s-14.11-5.561-15.49-3.17c-1.381 2.392 3.316 7.688 10.49 11.83 7.174 4.143 14.11 5.562 15.49 3.17Z'>
+        </path><path
+          stroke='#07041F'
+          stroke-width='.5'
+          d='M22.502 24.332c7.174-4.142 11.87-9.439 10.49-11.83-1.38-2.392-8.316-.972-15.49 3.17-7.174 4.142-11.871 9.438-10.49 11.83 1.38 2.391 8.316.972 15.49-3.17Z'>
+        </path><path
+          stroke='#07041F'
+          stroke-width='.5'
+          d='M20 21.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z'>
+        </path>
+      </svg>
+    </li>
+    <li class={`uppercase m-0 ${currentPath === '' ? 'font-semibold' : ''}`}>
+      <a class='active:text-black' href='/'>Home</a>
+    </li>
+    <li
+      class={`uppercase m-0 ${currentPath === 'work' ? 'font-semibold' : 'text-gray'}`}>
+      <a class='active:text-black' href='/work'>Work</a>
+    </li>
+    <li class='uppercase text-gray m-0'>
+      <a class='hover:text-black' href='/#about'>About</a>
+    </li>
+    <li class='uppercase text-gray m-0'>
+      <a class='hover:text-black' href='/#resume'>Resume</a>
+    </li>
+    <li class='uppercase text-gray m-0'>
+      <a class='hover:text-black' href='/#contact'>Contact</a>
+    </li>
+  </ul>
+  <SocialNetworks />
+</aside>

@@ -1,17 +1,18 @@
 ---
 import Button from '@/components/Button.astro'
 import Card from '@/components/Card.astro'
+import Separator from '@/components/Separator.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Juan Camilo Urbano'>
   <main>
     <h1 class='font-xanh text-6xl'>Crafting and Design.</h1>
-    <p class='text-gray mt-2 text-lg'>
+    <p class='text-gray mt-2 text-xl'>
       Simply put, I spend part of my day in front of my setup 💻 creating cool
       designs for cool people all over the world 🌎.
     </p>
-    <div class='border-t border-gray/30 my-4'></div>
+    <Separator />
     <Card
       title='Swiset Design System'
       body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
@@ -19,7 +20,7 @@ import Layout from '../layouts/Layout.astro'
       image='/images/system-design.jpeg'
       tags={['Design System', 'UI Design']}
     />
-    <div class='border-t border-gray/30 my-4'></div>
+    <Separator />
     <Card
       title='Leaderboard'
       body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
@@ -27,8 +28,8 @@ import Layout from '../layouts/Layout.astro'
       image='/images/leaderboard.jpeg'
       tags={['UX Design', 'UI Design']}
     />
-    <div class='border-t border-gray/30 my-4'></div>
-    <h2 class='text-black text-5xl text-center mt-12 mb-8'>
+    <Separator />
+    <h2 class='text-black text-5xl text-center mt-12 mb-8' id='about'>
       Hey, I am Camilo.<br /> Get to know me
     </h2>
     <p class='my-4 text-2xl text-center'>
@@ -49,6 +50,85 @@ import Layout from '../layouts/Layout.astro'
         </Fragment>
       </Button>
     </div>
+    <div class='text-gray text-lg'>
+      <div class='flex mt-10 gap-5'>
+        <img
+          src='/images/profile.jpeg'
+          alt='Juan Camilo Urbano picture'
+          class='w-1/2 h-[400px] object-cover rounded-lg'
+        />
+        <div class='w-1/2'>
+          <p class=''>
+            Hi! I'm Camilo, a guy passionate about design, art and technology,
+            with a colorful and diverse history that has deeply influenced my
+            creative approach. Since my childhood, I've always been fascinated
+            by drawing and creativity in all its forms. I think my love for
+            design was born in those early years, drawing whenever I could in my
+            notebooks and textbooks and creating imaginary worlds in my mind.
+          </p>
+          <p class='mt-10'>
+            Born in Colombia, I grew up surrounded by a rich mix of cultures and
+            traditions that have influenced my work. My journey in the
+            professional world began when exploring
+          </p>
+        </div>
+      </div>
+      <p class='mt-10'>
+        The different professions in technology I discovered one that brought
+        together everything I love, on one hand the creation of a product that
+        impacts people's lives, and on the other hand my more creative approach,
+        those two passions helped me to find UX/UI design. Since then, I have
+        been in constant search of new ways of expression and how to merge
+        functionality with aesthetics in every project I embark on.
+      </p>
+      <p class='mt-10'>
+        My approach to design is based on the idea that every project tells a
+        unique story, and I strive to capture the essence of that narrative in
+        every creation by always using real data. I am inspired by nature,
+        architecture and the people around me, and I seek to integrate these
+        influences into my work in an organic and authentic way.
+      </p>
+      <p class='mt-10'>
+        In my free time I love listening to music, going to the gym, I enjoy
+        movies, movies and series in general, I love food, video games and much
+        more.
+      </p>
+    </div>
+    <Separator />
+    <div class='mt-12' id='resume'>
+      <section class='flex justify-between mb-8'>
+        <h2 class='text-black text-3xl text-center mb-8 font-myriad'>
+          Resume / CV
+        </h2>
+        <Button>
+          Download CV
+          <Fragment slot='icon'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              fill='none'>
+              <path
+                stroke='#fff'
+                d='M21 15H3v6h18v-6ZM9 9l3 3 3-3M12 3v9M6 18h1.5M9 18h1.5'>
+              </path>
+            </svg>
+          </Fragment>
+        </Button>
+      </section>
+      <img src='/images/resume.png' alt='Juan Camilo Urbano Resume' />
+    </div>
+    <Separator />
+    <div class='flex justify-end' id='contact'>
+      <img src='/images/pencil.png' alt='' class='h-20' />
+    </div>
+    <h2 class='text-black text-3xl mb-8 font-myriad'>Contact</h2>
+    <p class='my-4 text-2xl text-center'>
+      Ready to discover more? Connect with me! If you want to dig deeper into
+      who I am and what I can bring to the table, feel free to contact me! I
+      promise fast answers and great, data-centric solutions tailored to your
+      users' needs!
+    </p>
   </main>
 </Layout>
 

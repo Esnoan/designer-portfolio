@@ -20,7 +20,7 @@ const { href, title, body, image, tags } = Astro.props
     <div class='flex gap-2'>
       {tags.map((tag) => <Chip title={tag} />)}
     </div>
-    <p class='text-gray'>
+    <p class='text-gray mr-6'>
       {body}
     </p>
     <a href={href} class='flex gap-2 text-black'>

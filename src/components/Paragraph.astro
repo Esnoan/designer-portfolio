@@ -1,0 +1,14 @@
+---
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<article class='mt-4 mb-8'>
+  {title !== undefined && <h2 class='text-3xl text-black '>{title}</h2>}
+  <p class='text-gray mt-2 text-xl'>
+    <slot />
+  </p>
+</article>

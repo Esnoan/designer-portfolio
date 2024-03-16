@@ -10,7 +10,8 @@ export default {
         'lighter-gray': '#DFE5EB'
       },
       fontFamily: {
-        xanh: ['Xanh Mono', 'monospace']
+        xanh: ['Xanh Mono', 'monospace'],
+        myriad: ['Myriad Pro Light', 'sans-serif']
       }
     }
   },
