@@ -1,0 +1,38 @@
+---
+import Menu from '@/components/Menu.astro'
+---
+
+<div class='sticky bottom-4 flex justify-center md:hidden'>
+  <button
+    id='dropdownTopButton'
+    data-dropdown-toggle='dropdownTop'
+    data-dropdown-placement='top'
+    class='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center'
+    type='button'>
+    Menu <svg
+      class='w-2.5 h-2.5 ms-3'
+      aria-hidden='true'
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 10 6'>
+      <path
+        stroke='currentColor'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        stroke-width='2'
+        d='M9 5 5 1 1 5'>
+      </path>
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div
+    id='dropdownTop'
+    class='z-10 hidden bg-white divide-y divide-gray-900 rounded-lg shadow w-44'>
+    <ul
+      class='py-2 text-base space-y-2 text-center'
+      aria-labelledby='dropdownTopButton'>
+      <Menu />
+    </ul>
+  </div>
+</div>

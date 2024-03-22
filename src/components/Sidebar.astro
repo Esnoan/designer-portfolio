@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro'
 import SocialNetworks from './SocialNetworks.astro'
 
 const pathname = new URL(Astro.request.url).pathname
@@ -7,30 +8,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
 
 <aside class='w-[350px] bg-light-gray min-h-screen p-10 fixed drop-shadow-lg'>
   <header>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='100'
-      height='100'
-      fill='none'>
-      <path stroke='#07041F' d='M3.5 4.5h93v91h-93z'></path><circle
-        cx='50'
-        cy='50'
-        r='5'
-        fill='#07041F'>
-      </circle><path
-        stroke='#07041F'
-        d='M97 50.5H51M50 87.5c6.904 0 12.5-16.79 12.5-37.5S56.904 12.5 50 12.5 37.5 29.29 37.5 50 43.096 87.5 50 87.5Z'>
-      </path><path
-        stroke='#07041F'
-        d='M82.48 68.746c3.452-5.98-8.29-19.22-26.225-29.576-17.936-10.355-35.275-13.903-38.726-7.925-3.452 5.98 8.29 19.22 26.226 29.576C61.69 71.176 79.029 74.724 82.48 68.746Z'>
-      </path><path
-        stroke='#07041F'
-        d='M56.255 60.83C74.19 50.475 85.932 37.233 82.48 31.255c-3.452-5.979-20.79-2.431-38.726 7.924-17.936 10.356-29.678 23.597-26.226 29.576 3.451 5.978 20.79 2.43 38.726-7.925Z'>
-      </path><path
-        stroke='#07041F'
-        d='M50 53.125a3.125 3.125 0 1 0 0-6.25 3.125 3.125 0 0 0 0 6.25Z'>
-      </path>
-    </svg>
+    <Logo size='large' />
     <h2 class='text-xl text-black mt-6 mb-2'>Juan Camilo Urbano</h2>
     <p class='text-base text-gray tracking-wide'>
       I am passionate about design and technology, I enjoy designing data-driven

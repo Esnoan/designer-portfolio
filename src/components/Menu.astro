@@ -1,0 +1,23 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
+---
+
+<>
+  <li class={`uppercase m-0 ${currentPath === '' ? 'font-semibold' : ''}`}>
+    <a class='active:text-black' href='/'>Home</a>
+  </li>
+  <li
+    class={`uppercase m-0 ${currentPath === 'work' ? 'font-semibold' : 'text-gray'}`}>
+    <a class='active:text-black' href='/work'>Work</a>
+  </li>
+  <li class='uppercase text-gray m-0'>
+    <a class='hover:text-black' href='/#about'>About</a>
+  </li>
+  <li class='uppercase text-gray m-0'>
+    <a class='hover:text-black' href='/#resume'>Resume</a>
+  </li>
+  <li class='uppercase text-gray m-0'>
+    <a class='hover:text-black' href='/#contact'>Contact</a>
+  </li>
+</>
