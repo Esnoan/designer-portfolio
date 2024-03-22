@@ -2,36 +2,32 @@
 import Menu from '@/components/Menu.astro'
 ---
 
-<div class='sticky bottom-4 flex justify-center md:hidden'>
+<div class=''>
   <button
-    id='dropdownTopButton'
-    data-dropdown-toggle='dropdownTop'
-    data-dropdown-placement='top'
-    class='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center'
-    type='button'>
-    Menu <svg
-      class='w-2.5 h-2.5 ms-3'
+    data-collapse-toggle='navbar-hamburger'
+    type='button'
+    class='inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+    aria-controls='navbar-hamburger'
+    aria-expanded='false'>
+    <span class='sr-only'>Open main menu</span>
+    <svg
+      class='w-5 h-5'
       aria-hidden='true'
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
-      viewBox='0 0 10 6'>
+      viewBox='0 0 17 14'>
       <path
         stroke='currentColor'
         stroke-linecap='round'
         stroke-linejoin='round'
         stroke-width='2'
-        d='M9 5 5 1 1 5'>
+        d='M1 1h15M1 7h15M1 13h15'>
       </path>
     </svg>
   </button>
-
-  <!-- Dropdown menu -->
-  <div
-    id='dropdownTop'
-    class='z-10 hidden bg-white divide-y divide-gray-900 rounded-lg shadow w-44'>
+  <div class='hidden w-full' id='navbar-hamburger'>
     <ul
-      class='py-2 text-base space-y-2 text-center'
-      aria-labelledby='dropdownTopButton'>
+      class='flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700'>
       <Menu />
     </ul>
   </div>

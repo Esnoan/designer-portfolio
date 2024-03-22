@@ -2,34 +2,18 @@
 interface Props {
   title: string
 }
+const { title } = Astro.props
 
 import '@fontsource-variable/inter'
 import '@fontsource/xanh-mono/400-italic.css'
 
-const { title } = Astro.props
-
 import Navbar from '@/components/Navbar.astro'
 import Footer from '../components/Footer.astro'
 import Sidebar from '../components/Sidebar.astro'
-import MobileMenu from '@/components/MobileMenu.astro'
+import BaseLayout from './BaseLayout.astro'
 ---
 
-<!doctype html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
-    <script
-      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js'
-    ></script>
-  </head>
-</html>
-
-<body>
+<BaseLayout title={title}>
   <section class='w-full md:flex md:max-w-[1280px] mx-auto'>
     <div class='hidden md:block'>
       <Sidebar />
@@ -43,109 +27,5 @@ import MobileMenu from '@/components/MobileMenu.astro'
       </div>
       <Footer />
     </div>
-    <MobileMenu />
   </section>
-</body>
-
-<style is:global>
-  :root {
-  }
-  html {
-    font-family: 'Inter Variable', sans-serif;
-    background: #fff;
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Regular';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Regular'),
-      url('/fonts/myriad-pro/MYRIADPRO-REGULAR.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Condensed';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Condensed'),
-      url('/fonts/myriad-pro/MYRIADPRO-COND.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Condensed Italic';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Condensed Italic'),
-      url('/fonts/myriad-pro/MYRIADPRO-CONDIT.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Light';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Light'),
-      url('/fonts/myriad-pro/MyriadPro-Light.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Semibold';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Semibold'),
-      url('/fonts/myriad-pro/MYRIADPRO-SEMIBOLD.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Semibold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Semibold Italic'),
-      url('/fonts/myriad-pro/MYRIADPRO-SEMIBOLDIT.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Bold Condensed';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Bold Condensed'),
-      url('/fonts/myriad-pro/MYRIADPRO-BOLDCOND.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Bold';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Bold'),
-      url('/fonts/myriad-pro/MYRIADPRO-BOLD.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Bold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Bold Italic'),
-      url('/fonts/myriad-pro/MYRIADPRO-BOLDIT.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Myriad Pro Bold Condensed Italic';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      local('Myriad Pro Bold Condensed Italic'),
-      url('/fonts/myriad-pro/MYRIADPRO-BOLDCONDIT.woff') format('woff');
-  }
-
-  p {
-    font-family: 'Myriad Pro Light';
-  }
-</style>
+</BaseLayout>

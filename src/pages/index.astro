@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title='Juan Camilo Urbano'>
   <main>
-    <h1 class='font-xanh text-6xl'>Crafting and Design.</h1>
+    <h1 class='font-xanh text-5xl md:text-6xl'>Crafting and Design.</h1>
     <p class='text-gray mt-2 text-xl'>
       Simply put, I spend part of my day in front of my setup 💻 creating cool
       designs for cool people all over the world 🌎.
@@ -96,10 +96,9 @@ import Layout from '../layouts/Layout.astro'
     </div>
     <Separator />
     <div class='mt-12' id='resume'>
-      <section class='flex justify-between mb-8'>
-        <h2 class='text-black text-3xl text-center mb-8 font-myriad'>
-          Resume / CV
-        </h2>
+      <section
+        class='flex flex-col md:flex-row justify-start md:justify-between mb-8'>
+        <h2 class='text-black text-3xl font-myriad mb-4'>Resume / CV</h2>
         <Button>
           Download CV
           <Fragment slot='icon'>
