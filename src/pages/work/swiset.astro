@@ -1,0 +1,32 @@
+---
+import Paragraph from '../../components/Paragraph.astro'
+import Tag from '../../components/Tag.astro'
+import WorkLayout from '../../layouts/WorkLayout.astro'
+---
+
+<WorkLayout title='Swiset - Study Case'>
+  <main>
+    <img src='/images/marco/marco.webp' alt='' />
+    <p class='uppercase text-xl text-[#667085] font-bold my-6'>
+      published on <span class='font-normal'>12 SEP 2022</span>
+    </p>
+    <h1 class='text-4xl'>Marco, Mobile Application - UX/UI Case Study.</h1>
+    <img src='/images/marco/marco-tags.webp' alt='' class='my-6' />
+    <Paragraph title='About'>
+      Marco is an app that helps people to know what is happening in their city
+      with a lot of events and activities to do, Marco facilitates contact with
+      the creators of events and those interested, is an excellent tool for both
+      people who want to go out and learn more about their city and for all
+      tourists who want to know the city they visit.
+    </Paragraph>
+
+    <div class='flex gap-4 my-8 flex-wrap justify-center'>
+      <Tag text='👨‍💻 My Role: UI/UX Design' />
+      <Tag text='🎨 Tools: Figma' />
+      <Tag text='⌛ Duration: 3 Weeks' />
+      <Tag text='🙋 Audience:  16 - 50 years old' />
+    </div>
+  </main>
+</WorkLayout>
+
+<style></style>

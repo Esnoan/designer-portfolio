@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string
+  color: string
+}
+
+const { name, color } = Astro.props
+---
+
+<div class='h-[120px] w-[150px]'>
+  <div class={`bg-[${color}] h-1/2`} style={{ backgroundColor: color }}></div>
+  <div class='bg-[#F8F8F8] h-1/2 flex flex-col justify-center p-4'>
+    <p class='text-[#343434]'>{name}</p>
+    <p class='text-[#667085]'>{color}</p>
+  </div>
+</div>
