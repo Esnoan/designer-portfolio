@@ -1,5 +1,5 @@
 ---
-import Card from '@/components/Card.astro'
+import Blog from '@/components/Blog.astro'
 import Separator from '@/components/Separator.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -12,22 +12,7 @@ import Layout from '../layouts/Layout.astro'
       designs for cool people all over the world 🌎.
     </p>
     <Separator />
-    <Card
-      title='Marco'
-      body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
-      href='/work/marco'
-      image='/images/marco/marco.png'
-      tags={['UX Design', 'UI Design']}
-    />
-    <Separator />
-    <Card
-      title='Swiset Design System'
-      body='Gorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur, Gorem ipsum dolor sit amet.'
-      href='#'
-      image='/images/system-design.jpeg'
-      tags={['Design System', 'UI Design']}
-    />
-    <Separator />
+    <Blog />
   </main>
 </Layout>
 
