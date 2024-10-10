@@ -41,7 +41,7 @@ import Layout from '../layouts/Layout.astro'
         <img
           src='/images/profile.jpg'
           alt='Juan Camilo Urbano picture'
-          class='w-full md:w-1/2 h-[500px] object-cover rounded-lg'
+          class='w-full md:w-1/2 h-[500px] object-cover'
         />
         <div class='w-full md:w-1/2'>
           <p class=''>
@@ -57,16 +57,17 @@ import Layout from '../layouts/Layout.astro'
             traditions that have influenced my work. My journey in the
             professional world began when exploring
           </p>
+          <p class='mt-10'>
+            The different professions in technology I discovered one that
+            brought together everything I love, on one hand the creation of a
+            product that impacts people's lives, and on the other hand my more
+            creative approach, those two passions helped me to find UX/UI
+            design. Since then, I have been in constant search of new ways of
+            expression and how to merge functionality with aesthetics in every
+            project I embark on.
+          </p>
         </div>
       </div>
-      <p class='mt-10'>
-        The different professions in technology I discovered one that brought
-        together everything I love, on one hand the creation of a product that
-        impacts people's lives, and on the other hand my more creative approach,
-        those two passions helped me to find UX/UI design. Since then, I have
-        been in constant search of new ways of expression and how to merge
-        functionality with aesthetics in every project I embark on.
-      </p>
       <p class='mt-10'>
         My approach to design is based on the idea that every project tells a
         unique story, and I strive to capture the essence of that narrative in
@@ -101,7 +102,18 @@ import Layout from '../layouts/Layout.astro'
           </Fragment>
         </Button>
       </section>
-      <img src='/images/resume.png' alt='Juan Camilo Urbano Resume' />
+      <div class='flex w-full justify-between'>
+        <img
+          src='/images/page1.png'
+          class='w-[calc(50%-10px)] drop-shadow-md'
+          alt='Juan Camilo Urbano Resume'
+        />
+        <img
+          src='/images/page2.png'
+          class='w-[calc(50%-10px)] drop-shadow-md'
+          alt='Juan Camilo Urbano Resume'
+        />
+      </div>
     </div>
     <Separator />
     <div class='flex justify-between items-center mb-8' id='contact'>
@@ -179,7 +191,7 @@ import Layout from '../layouts/Layout.astro'
           </path>
         </svg>
 
-        <p class='text-black text-2xl'>🇨🇴 +57 3218563235</p>
+        <p class='text-black text-2xl'>+57 3218563235</p>
       </a>
     </div>
   </main>
