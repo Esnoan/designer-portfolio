@@ -1,16 +1,22 @@
 ---
 interface Props {
   title?: string
+  href?: string
+  isDownload?: boolean
 }
 
-const { title } = Astro.props
+const { title, href, isDownload } = Astro.props
+
+const download = isDownload ? 'juan-camilo-urbano-resume.pdf' : undefined
 ---
 
-<div
+<a
+  href={href}
+  download={download}
   class='bg-gradient-to-t from-[#0F093E] to-[#07041F] text-white px-5 py-2 text-base flex gap-2 max-w-fit justify-center items-center btn h-10 cursor-pointer hover:to-[#0F093E] hover:from-[#07041F]'>
   <slot />
   <slot name='icon' />
-</div>
+</a>
 
 <style>
   .btn {

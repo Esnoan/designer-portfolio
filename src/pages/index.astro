@@ -2,6 +2,7 @@
 import Blog from '@/components/Blog.astro'
 import Button from '@/components/Button.astro'
 import Separator from '@/components/Separator.astro'
+import { links } from '@/constants/info'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -22,7 +23,7 @@ import Layout from '../layouts/Layout.astro'
       improve human experiences.
     </p>
     <div class='flex justify-center'>
-      <Button>
+      <Button href='#contact'>
         Get in touch
         <Fragment slot='icon'>
           <svg
@@ -38,7 +39,7 @@ import Layout from '../layouts/Layout.astro'
     <div class='text-gray text-lg'>
       <div class='flex flex-col md:flex-row mt-10 gap-5'>
         <img
-          src='/images/profile.jpeg'
+          src='/images/profile.jpg'
           alt='Juan Camilo Urbano picture'
           class='w-full md:w-1/2 h-[500px] object-cover rounded-lg'
         />
@@ -84,7 +85,7 @@ import Layout from '../layouts/Layout.astro'
       <section
         class='flex flex-col md:flex-row justify-start md:justify-between mb-8'>
         <h2 class='text-black text-3xl font-myriad mb-4'>Resume / CV</h2>
-        <Button>
+        <Button href='/cv/juan-camilo-urbano-resume.pdf' isDownload>
           Download CV
           <Fragment slot='icon'>
             <svg
@@ -103,16 +104,84 @@ import Layout from '../layouts/Layout.astro'
       <img src='/images/resume.png' alt='Juan Camilo Urbano Resume' />
     </div>
     <Separator />
-    <div class='flex justify-end' id='contact'>
+    <div class='flex justify-between items-center mb-8' id='contact'>
+      <h2 class='text-black text-3xl font-myriad'>Contact</h2>
       <img src='/images/pencil.png' alt='' class='h-20' />
     </div>
-    <h2 class='text-black text-3xl mb-8 font-myriad'>Contact</h2>
     <p class='my-4 text-2xl text-center'>
       Ready to discover more? Connect with me! If you want to dig deeper into
       who I am and what I can bring to the table, feel free to contact me! I
       promise fast answers and great, data-centric solutions tailored to your
       users' needs!
     </p>
+    <div class='flex justify-between mt-16'>
+      <a
+        href={links.email}
+        referrerpolicy='no-referrer'
+        class='flex flex-col items-center gap-2'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='40'
+          height='40'
+          fill='none'>
+          <path stroke='#000' d='M35 7.5H5v25h30v-25Z'></path><path
+            stroke='#000'
+            d='m35 12.5-15 10-15-10'>
+          </path>
+        </svg>
+        <p class='text-black text-2xl'>jcamilouc1@gmail.com</p>
+      </a>
+      <a
+        href={links.linkedin}
+        target='_blank'
+        referrerpolicy='no-referrer'
+        class='flex flex-col items-center gap-2'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='40'
+          height='40'
+          fill='none'>
+          <path
+            stroke='#000'
+            d='M33.125 35V20M14.375 35V12.5M14.375 20c0-4.144 4.2-7.5 9.375-7.5s9.375 3.356 9.375 7.5M6.875 5v3.75M6.875 12.5V35'>
+          </path>
+        </svg>
+        <p class='text-black text-2xl'>
+          https://www.linkedin.com/in/ juan-camilo-urbano/
+        </p>
+      </a>
+      <a
+        href={links.phone}
+        target='_blank'
+        referrerpolicy='no-referrer'
+        class='flex flex-col items-center gap-2'>
+        <svg
+          width='41'
+          height='40'
+          viewBox='0 0 41 40'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <path
+            d='M15.5 35C16.163 35 16.7989 34.7366 17.2678 34.2678C17.7366 33.7989 18 33.163 18 32.5V30C18 29.337 17.7366 28.7011 17.2678 28.2322C16.7989 27.7634 16.163 27.5 15.5 27.5C10.5 27.5 10.5 22.5 10.5 20C10.5 17.5 10.5 12.5 15.5 12.5C16.163 12.5 16.7989 12.2366 17.2678 11.7678C17.7366 11.2989 18 10.663 18 10V7.5C18 6.83696 17.7366 6.20107 17.2678 5.73223C16.7989 5.26339 16.163 5 15.5 5C9.25 5 5.5 7.5 5.5 20C5.5 32.5 9.25 35 15.5 35Z'
+            stroke='black'>
+          </path>
+          <path
+            d='M30.125 32.5002C33.3244 29.2974 35.1216 24.9554 35.1216 20.4283C35.1216 15.9012 33.3244 11.5593 30.125 8.35645'
+            stroke='black'>
+          </path>
+          <path
+            d='M25.2938 27.6688C26.2449 26.7181 26.9994 25.5893 27.5142 24.3469C28.0289 23.1045 28.2939 21.7729 28.2939 20.4281C28.2939 19.0833 28.0289 17.7517 27.5142 16.5093C26.9994 15.267 26.2449 14.1382 25.2938 13.1875'
+            stroke='black'>
+          </path>
+          <path
+            d='M20.5 22.8439C21.14 22.203 21.4995 21.3342 21.4995 20.4283C21.4995 19.5225 21.14 18.6537 20.5 18.0127'
+            stroke='black'>
+          </path>
+        </svg>
+
+        <p class='text-black text-2xl'>🇨🇴 +57 3218563235</p>
+      </a>
+    </div>
   </main>
 </Layout>
 
