@@ -1,0 +1,132 @@
+---
+import Paragraph from '../../components/Paragraph.astro'
+import Tag from '../../components/Tag.astro'
+import WorkLayout from '../../layouts/WorkLayout.astro'
+---
+
+<WorkLayout title='Smart Vet - Study Case'>
+  <main>
+    <img src='/images/smart-vet/cover.png' alt='' />
+    <p class='uppercase text-xl text-[#667085] font-bold my-6'>
+      published on <span class='font-normal'>19 Feb 2025</span>
+    </p>
+    <h1 class='text-4xl'>
+      UX Case Study: Redesigning and Creating a Design System
+    </h1>
+    <Paragraph title='Context'>
+      The platform I was working on needed a complete overhaul. Its design was
+      outdated, the user experience was unintuitive and it lacked visual
+      consistency. My goal was to modernise the interface, improve usability and
+      create a scalable design system that optimised workflows and visual
+      consistency.
+    </Paragraph>
+
+    <div class='flex gap-4 my-8 flex-wrap justify-center'>
+      <Tag text='👨‍💻 My Role: UI/UX Design' />
+      <Tag text='🎨 Tools: Figma' />
+      <Tag text='⌛ Duration: 3 Months' />
+      <Tag text='🙋 Audience:  Vets and pet owners' />
+    </div>
+
+    <Paragraph title='Problem'>
+      <ul class='list-disc list-inside marker:text-black font-myriad text-xl'>
+        <li>The UI was outdated and did not follow modern trends.</li>
+        <li>
+          There was no defined design system, which led to inconsistencies.
+        </li>
+        <li>The user experience had friction in key flows.</li>
+        <li>
+          A scalable solution was required to improve the efficiency of the
+          design and development team.
+        </li>
+      </ul>
+    </Paragraph>
+
+    <img src='/images/smart-vet/image1.png' alt='' class='w-full h-auto my-8' />
+
+    <h1 class='text-4xl'>Solution</h1>
+
+    <Paragraph title='1. Analysis and Discovery'>
+      <ul class='list-disc list-inside marker:text-black font-myriad text-xl'>
+        <li>UX/UI audit of the platform.</li>
+        <li>Gathering feedback from users and stakeholders.</li>
+        <li>
+          Benchmarking with similar platforms to identify opportunities for
+          improvement.
+        </li>
+      </ul>
+    </Paragraph>
+
+    <Paragraph title='2. Complete UI Redesign'>
+      <ul class='list-disc list-inside marker:text-black font-myriad text-xl'>
+        <li>
+          Implementation of a new visual style aligned with current trends.
+        </li>
+        <li>
+          Reorganisation of the information architecture to improve navigation.
+        </li>
+        <li>
+          Design of reusable components with principles of accessibility and
+          usability.
+        </li>
+      </ul>
+    </Paragraph>
+
+    <div class='grid grid-cols-2 gap-4 my-8'>
+      <img src='/images/smart-vet/1.png' alt='' />
+      <img src='/images/smart-vet/2.png' alt='' />
+      <img src='/images/smart-vet/3.png' alt='' />
+      <img src='/images/smart-vet/4.png' alt='' />
+      <img src='/images/smart-vet/5.png' alt='' />
+      <img src='/images/smart-vet/6.png' alt='' />
+    </div>
+
+    <Paragraph title='3. Creating a Design System'>
+      <ul class='list-disc list-inside marker:text-black font-myriad text-xl'>
+        <li>
+          Development from scratch of a modular and scalable system design.
+        </li>
+        <li>
+          Detailed documentation to ensure consistency in future
+          implementations.
+        </li>
+        <li>Implementation of design tokens to facilitate adaptability.</li>
+      </ul>
+    </Paragraph>
+
+    <img src='/images/smart-vet/colors.png' alt='' class='w-full h-auto my-8' />
+    <img
+      src='/images/smart-vet/typography.png'
+      alt=''
+      class='w-full h-auto my-8'
+    />
+    <img src='/images/smart-vet/inputs.png' alt='' class='w-full h-auto my-8' />
+    <img
+      src='/images/smart-vet/buttons.png'
+      alt=''
+      class='w-full h-auto my-8'
+    />
+    <img
+      src='/images/smart-vet/overlays.png'
+      alt=''
+      class='w-full h-auto my-8'
+    />
+    <img src='/images/smart-vet/menu.png' alt='' class='w-full h-auto my-8' />
+
+    <Paragraph title='4. Impact'>
+      <ul class='list-disc list-inside marker:text-black font-myriad text-xl'>
+        <li>
+          80% reduction in design and development times thanks to the design
+          system.
+        </li>
+        <li>Increased user retention rate due to improved user experience.</li>
+        <li>
+          Positive feedback from stakeholders and users, highlighting the visual
+          modernisation and ease of use.
+        </li>
+      </ul>
+    </Paragraph>
+
+    <img src='/images/smart-vet/review.png' alt='' class='w-full h-auto my-8' />
+  </main>
+</WorkLayout>
