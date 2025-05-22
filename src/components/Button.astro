@@ -13,15 +13,9 @@ const download = isDownload ? 'juan-camilo-urbano-resume.pdf' : undefined
 <a
   href={href}
   download={download}
-  class='bg-gradient-to-t from-[#0F093E] to-[#07041F] text-white px-5 py-2 text-base flex gap-2 max-w-fit justify-center items-center btn h-10 cursor-pointer hover:to-[#0F093E] hover:from-[#07041F]'>
+  class='bg-blue-500 text-white px-5 py-2 text-base flex gap-2 max-w-fit justify-center items-center h-10 cursor-pointer rounded'>
   <slot />
   <slot name='icon' />
 </a>
 
-<style>
-  .btn {
-    box-shadow:
-      -3px 3px #fff,
-      -7px 7px 0px 0px #07041f;
-  }
-</style>
+<style></style>

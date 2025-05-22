@@ -8,12 +8,13 @@ interface Props {
 }
 
 import Chip from '@/components/Chip.astro'
+import Button from './Button.astro'
 
 const { href, title, body, image, tags } = Astro.props
 ---
 
-<div class='w-full flex flex-col md:flex-row gap-4 md:gap-0 my-12'>
-  <section class='w-full md:w-1/2 flex flex-col gap-4 md:gap-0 justify-between'>
+<div class='w-full flex flex-col md:flex-row gap-4 my-12'>
+  <section class='w-full md:w-1/2 flex flex-col gap-4 justify-between'>
     <h2 class='text-2xl text-black'>
       {title}
     </h2>
@@ -23,18 +24,28 @@ const { href, title, body, image, tags } = Astro.props
     <p class='text-gray mr-0 md:mr-6'>
       {body}
     </p>
-    <a href={href} class='flex gap-2 text-black hover:underline'>
-      View Project<svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='27'
-        height='27'
-        fill='none'>
-        <path
-          stroke='#07041F'
-          d='M23.625 11.813V3.374h-8.438M23.625 3.375l-20.25 20.25'>
-        </path>
-      </svg>
-    </a>
+    <Button href={href}>
+      View project
+      <Fragment slot='icon'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'>
+          <title>arrow_right_up_line</title><g
+            id='arrow_right_up_line'
+            fill='none'
+            fill-rule='nonzero'>
+            <path
+              d='M24 0v24H0V0h24ZM12.594 23.258l-.012.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.105.074.014.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.008.201.092c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.092.01-.009.004-.011.017-.43-.003-.012-.01-.01-.184-.092Z'>
+            </path><path
+              fill='white'
+              d='M18 5a1 1 0 0 1 1 1v8a1 1 0 1 1-2 0V8.414l-9.95 9.95a1 1 0 0 1-1.414-1.414L15.586 7H10a1 1 0 1 1 0-2h8Z'>
+            </path>
+          </g>
+        </svg>
+      </Fragment>
+    </Button>
   </section>
   <section class='w-full md:w-1/2'>
     <img
