@@ -3,9 +3,44 @@ import Logo from './Logo.astro'
 import SocialNetworks from './SocialNetworks.astro'
 
 const pathname = new URL(Astro.request.url).pathname
-const currentPath = pathname.slice(1) // remove the first "/"
+const hash = Astro.url.hash
+const currentPath = pathname.slice(1)
+const isHashRoute = (hashName: string) => hash === `#${hashName}`
 ---
 
+<script>
+  function updateActiveHashLink() {
+    const hash = window.location.hash.slice(1) // Removemos el # del hash
+    const hashLinks = document.querySelectorAll('[data-hash-link]')
+    const homeLink = document.querySelector('[data-home-link]')
+
+    // Si hay un hash activo, desactivamos Home
+    if (hash) {
+      homeLink?.classList.remove('font-semibold')
+    } else {
+      // Si no hay hash, verificamos si estamos en la página principal
+      const isHome =
+        window.location.pathname === '/' || window.location.pathname === ''
+      homeLink?.classList.toggle('font-semibold', isHome)
+    }
+
+    // Actualizamos los hash links
+    hashLinks.forEach((link) => {
+      const linkHash = link.getAttribute('data-hash-link')
+      if (linkHash === hash) {
+        link.classList.add('font-semibold')
+      } else {
+        link.classList.remove('font-semibold')
+      }
+    })
+  }
+
+  // Actualizar al cargar la página
+  document.addEventListener('DOMContentLoaded', updateActiveHashLink)
+
+  // Actualizar cuando cambie el hash
+  window.addEventListener('hashchange', updateActiveHashLink)
+</script>
 <aside class='w-[350px] bg-light-gray min-h-screen p-10 fixed drop-shadow-lg'>
   <header>
     <Logo size='large' />
@@ -21,20 +56,20 @@ const currentPath = pathname.slice(1) // remove the first "/"
   </header>
   <div class='border-t border-gray/30 my-4'></div>
   <ul class='space-y-4'>
-    <li class={`uppercase m-0 ${currentPath === '' ? 'font-semibold' : ''}`}>
+    <li class={`uppercase m-0`} data-home-link>
       <a class='active:text-black' href='/'>Home</a>
     </li>
     <li
       class={`uppercase m-0 ${currentPath === 'work' ? 'font-semibold' : 'text-gray'}`}>
       <a class='active:text-black' href='/work'>Work</a>
     </li>
-    <li class='uppercase text-gray m-0'>
+    <li class={`uppercase m-0`} data-hash-link='about'>
       <a class='hover:text-black' href='/#about'>About</a>
     </li>
-    <li class='uppercase text-gray m-0'>
+    <li class={`uppercase m-0`} data-hash-link='resume'>
       <a class='hover:text-black' href='/#resume'>Resume</a>
     </li>
-    <li class='uppercase text-gray m-0'>
+    <li class={`uppercase m-0`} data-hash-link='contact'>
       <a class='hover:text-black' href='/#contact'>Contact</a>
     </li>
   </ul>
